@@ -5,6 +5,7 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import { WavyBackground } from './ui/wavy-background'
+import React from 'react'
 
 
 const navigation = [
@@ -123,7 +124,7 @@ const Home = () => {
             
             <div className="text-center">
               <h1 className="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
-                <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#689e6e] to-[#4A4A4A]'>Sustainability</span> Made Simple
+                <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#62d870] to-[#214618]'>Sustainability</span> Made Simple
               </h1>
               <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
               Transform your home into an eco-haven with curated, earth-friendly essentials delivered monthly.

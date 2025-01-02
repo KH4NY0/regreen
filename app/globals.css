@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .hover-button {
-  background-color: #426833; /* Button background color */
+  background-color: #33753b; /* Button background color */
   color: #F8F6F0; /* Text color */
   border: none;
   padding: 10px 20px;
@@ -14,7 +14,7 @@
 }
 
 .hover-button:hover {
-  background-color: #37721f;
+  background-color: #85d670;
   transform: scale(1.1); /* Slightly enlarges the button */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for the pop-up effect */
 }
