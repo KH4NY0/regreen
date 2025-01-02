@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 .hover-button {
   background-color: #33753b; /* Button background color */
   color: #F8F6F0; /* Text color */

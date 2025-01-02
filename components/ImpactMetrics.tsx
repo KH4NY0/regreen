@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 
-const ImpactMetrics = () => {
+const ImpactMetrics = ({ id }: { id: string }) => {
   const controls = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.2 });
 
@@ -27,7 +27,7 @@ const ImpactMetrics = () => {
   ];
 
   return (
-    <section className="py-24 bg-white text-gray-900 ">
+    <section id="impact-metrics" className="py-24 bg-white text-gray-900 ">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl font-semibold sm:text-4xl">

@@ -59,7 +59,7 @@ const timeline: TimelineEvent[] = [
   }
 ];
 
-const AboutUs: React.FC = () => {
+const AboutUs = ({ id }: { id: string }) => {
   return (
     <>
       <Head>
@@ -73,7 +73,7 @@ const AboutUs: React.FC = () => {
         <meta property="og:description" content="Making sustainable living accessible through eco-friendly home essentials since 2022." />
       </Head>
 
-      <section className="py-24 bg-white" aria-label="Company Timeline">
+      <section id='about-us' className="py-24 bg-white" aria-label="Company Timeline">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

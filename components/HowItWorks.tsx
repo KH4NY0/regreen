@@ -7,6 +7,8 @@ import React from "react";
 import { useState } from "react";
 import { ReactNode } from "react";
 
+
+
 // Steps data structure remains the same for clarity and maintainability
 const steps = [
   {
@@ -32,12 +34,12 @@ const steps = [
   }
 ];
 
-export const HowItWorks = () => {
+export const HowItWorks = ({ id }: { id: string }) => {
   let [hoveredIndex, setHoveredIndex] = useState<null | number>(null);
 
   return (
     // Changed background to white and adjusted text colors for better contrast
-    <section className="py-24 bg-white">
+    <section id="how-it-works" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">

@@ -9,10 +9,10 @@ import React from 'react'
 
 
 const navigation = [
-  { name: 'Products', href: '/FeaturedProducts' },
-  { name: 'Impact', href: '#impact' },
-  { name: 'Pricing', href: '#' },
-  { name: 'About Us', href: '#' },
+  { name: 'Products', href: '#featured-products' },
+  { name: 'Impact', href: '#impact-metrics' },
+  { name: 'Pricing', href: '#pricing' },
+  { name: 'About Us', href: '#about-us' },
 ]
 
 const Home = () => {
@@ -136,7 +136,7 @@ const Home = () => {
                 >
                   Get Started
                 </a>
-                <a href="#" className="text-sm/6 font-semibold text-gray-900 hover:text-green-800 ease-in-out duration-300">
+                <a href="#how-it-works" className="text-sm/6 font-semibold text-gray-900 hover:text-green-800 ease-in-out duration-300">
                   How It Works <span aria-hidden="true">→</span>
                 </a>
               </div>
