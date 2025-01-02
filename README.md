@@ -1,5 +1,3 @@
-# Regreen
-
 ![Local Image](/public/images/regreen-hero-section-screanshot.jpeg)
 
 ---
