@@ -10,200 +10,97 @@ const FeaturedProducts = ({ id }: { id: string }) => {
     skincare: 'Skincare & Beauty',
     bags: 'Bags & Accessories',
     home: 'Home & Living',
-    kitchen: 'Kitchen & Dining',
-    fashion: 'Sustainable Fashion',
-    wellness: 'Health & Wellness',
     travel: 'Travel Essentials',
-    zero_waste: 'Zero Waste',
-    pets: 'Eco Pet Care'
+    pets: 'Pet Care'
   };
 
   const products = [
     // Skincare & Beauty
     {
-      name: 'Rosehip Night Serum',
-      description: 'Organic rosehip oil serum with vitamin C for overnight skin repair.',
-      image: '/images/rosehip-serum.jpg',
-      impact: 'Zero-waste glass packaging',
+      name: 'Kiwi Night Serum',
+      description: 'Revitalizing night serum infused with kiwi extract, packed with vitamins and antioxidants to rejuvenate the skin overnight.',
+      image: '/images/skincare/borcelle.png',
+      impact: 'Eco-friendly packaging, made from recyclable materials',
       category: 'skincare'
     },
     {
-      name: 'Bamboo Charcoal Cleanser',
-      description: 'Deep cleansing face wash with activated charcoal.',
-      image: '/images/charcoal-cleanser.jpg',
+      name: 'Bamboo Cleanser',
+      description: 'Gentle face cleanser made with bamboo extract, designed to purify and refresh the skin while maintaining its natural balance.',
+      image: '/images/skincare/aloe-cream.png',
       impact: 'Plastic-free packaging',
       category: 'skincare'
     },
     {
       name: 'Natural Dry Shampoo',
       description: 'Rice and kaolin clay based dry shampoo for all hair types.',
-      image: '/images/dry-shampoo.jpg',
+      image: '/images/skincare/natural dry shampoo.png',
       impact: 'Refillable container system',
       category: 'skincare'
     },
 
     // Bags & Accessories
     {
-      name: 'Hemp Canvas Tote',
-      description: 'Durable hemp canvas bag with vegan straps.',
-      image: '/images/hemp-tote.jpg',
+      name: 'Tote bag',
+      description: 'A versatile, reusable tote bag made from high-quality, eco-friendly materials. Its perfect for carrying groceries, books, or personal items ',
+      image: '/images/bags/tote.png',
       impact: 'Biodegradable materials',
       category: 'bags'
     },
     {
-      name: 'Cork Laptop Sleeve',
-      description: 'Protective sleeve made from sustainable cork fabric.',
-      image: '/images/cork-sleeve.jpg',
-      impact: 'Renewable cork materials',
+      name: 'Zinc Earings',
+      description: 'made from zinc alloy, a durable and lightweight material. These earrings feature a sleek design, making them perfect for both casual and formal occasions.',
+      image: '/images/bags/zinc-earings.png',
+      impact: 'Zinc is a non-toxic metal that is 100% recyclable',
       category: 'bags'
     },
     {
-      name: 'Recycled Denim Backpack',
-      description: 'Stylish backpack from upcycled denim.',
-      image: '/images/denim-backpack.jpg',
-      impact: 'Saves 2500 gallons of water',
+      name: 'Cork Handbag',
+      description: 'A chic and durable handbag made from eco-friendly cork fabric. The Cork Handbag is lightweight yet sturdy',
+      image: '/images/bags/bag.png',
+      impact: 'Cork is biodegradable and recyclable',
       category: 'bags'
     },
 
     // Home & Living
     {
-      name: 'Organic Cotton Bedding',
-      description: 'GOTS certified organic cotton bed sheets and pillowcases.',
-      image: '/images/cotton-bedding.jpg',
-      impact: 'Pesticide-free farming',
+      name: 'Clay Vase',
+      description: 'A beautifully crafted vase made from natural clay, perfect for displaying flowers or as a decorative piece.',
+      image: '/images/home/clay-vase.png',
+      impact: 'Uses fewer chemicals and synthetic materials than other ceramics.',
       category: 'home'
     },
     {
-      name: 'Beeswax Candles',
-      description: 'Natural air-purifying beeswax candles in recycled glass.',
-      image: '/images/beeswax-candles.jpg',
-      impact: 'Supports local beekeepers',
+      name: 'Organic Candle',
+      description: 'A natural, eco-friendly candle made from organic waxes like soy, beeswax, or coconut. These candles burn cleanly without harmful chemicals',
+      image: '/images/home/organic-candles.png',
+      impact: 'Emits less soot and toxins',
       category: 'home'
     },
     {
-      name: 'Bamboo Air Purifier',
-      description: 'Natural air purifier with activated charcoal.',
-      image: '/images/air-purifier.jpg',
-      impact: 'Plastic-free air cleaning',
+      name: 'Bamboo Toothbrush',
+      description: 'A sustainable toothbrush with a handle made from biodegradable bamboo. The bamboo toothbrush features soft bristles, often made from nylon or plant-based materials',
+      image: '/images/home/bamboo-toothbrush.png',
+      impact: 'more sustainable material than plastic.',
       category: 'home'
-    },
-
-    // Kitchen & Dining
-    {
-      name: 'Silicone Food Covers',
-      description: 'Reusable stretch lids for various containers.',
-      image: '/images/food-covers.jpg',
-      impact: 'Replaces plastic wrap',
-      category: 'kitchen'
-    },
-    {
-      name: 'Coconut Bowl Set',
-      description: 'Handcrafted bowls from reclaimed coconut shells.',
-      image: '/images/coconut-bowls.jpg',
-      impact: 'Upcycled natural materials',
-      category: 'kitchen'
-    },
-    {
-      name: 'Glass Storage Containers',
-      description: 'Plastic-free food storage with bamboo lids.',
-      image: '/images/glass-containers.jpg',
-      impact: 'Lifetime durability',
-      category: 'kitchen'
-    },
-
-    // Sustainable Fashion
-    {
-      name: 'Hemp Basics Bundle',
-      description: 'Essential t-shirts made from organic hemp.',
-      image: '/images/hemp-basics.jpg',
-      impact: 'Low-water cultivation',
-      category: 'fashion'
-    },
-    {
-      name: 'Recycled Ocean Plastic Watch',
-      description: 'Timepiece made from recovered ocean plastic.',
-      image: '/images/ocean-watch.jpg',
-      impact: 'Removes 10kg ocean plastic',
-      category: 'fashion'
-    },
-    {
-      name: 'Cork Wallet',
-      description: 'Slim wallet made from sustainable cork.',
-      image: '/images/cork-wallet.jpg',
-      impact: 'Vegan leather alternative',
-      category: 'fashion'
-    },
-
-    // Health & Wellness
-    {
-      name: 'Natural Yoga Mat',
-      description: 'Non-toxic rubber and cork yoga mat.',
-      image: '/images/yoga-mat.jpg',
-      impact: 'Biodegradable materials',
-      category: 'wellness'
-    },
-    {
-      name: 'Meditation Cushion',
-      description: 'Organic buckwheat meditation pillow.',
-      image: '/images/meditation-cushion.jpg',
-      impact: 'Sustainable agriculture',
-      category: 'wellness'
-    },
-    {
-      name: 'Bamboo Massage Tools',
-      description: 'Self-massage and acupressure tools.',
-      image: '/images/massage-tools.jpg',
-      impact: 'Renewable bamboo',
-      category: 'wellness'
     },
 
     // Travel Essentials
     {
       name: 'Bamboo Travel Utensils',
-      description: 'Portable cutlery set with case.',
-      image: '/images/travel-utensils.jpg',
-      impact: 'Replaces plastic utensils',
+      description: 'A portable set of utensils made from sustainable bamboo, designed for on-the-go use. ',
+      image: '/images/travel/bamboo-travel.png',
+      impact: 'Sustainable alternative to disposable plastic cutlery.',
       category: 'travel'
-    },
-    {
-      name: 'Solar Power Bank',
-      description: 'Portable solar charger for devices.',
-      image: '/images/solar-bank.jpg',
-      impact: 'Clean energy charging',
-      category: 'travel'
-    },
-
-    // Zero Waste
-    {
-      name: 'Compost Bin',
-      description: 'Countertop compost bin with charcoal filter.',
-      image: '/images/compost-bin.jpg',
-      impact: 'Reduces landfill waste',
-      category: 'zero_waste'
-    },
-    {
-      name: 'Safety Razor',
-      description: 'Plastic-free metal safety razor.',
-      image: '/images/safety-razor.jpg',
-      impact: 'Eliminates plastic razors',
-      category: 'zero_waste'
     },
 
     // Eco Pet Care
     {
-      name: 'Hemp Pet Collar',
-      description: 'Durable hemp pet collar with coconut buttons.',
-      image: '/images/pet-collar.jpg',
-      impact: 'Plastic-free pet care',
+      name: 'Organic Kibble',
+      description: 'Nutritious pet food made from certified organic ingredients, including natural grains, vegetables, and high-quality protein sources',
+      image: '/images/pet/organic-kibble.png',
+      impact: ' smaller carbon footprint compared to conventional pet food.',
       category: 'pets'
     },
-    {
-      name: 'Natural Pet Toys',
-      description: 'Organic cotton and hemp rope toys.',
-      image: '/images/pet-toys.jpg',
-      impact: 'Non-toxic materials',
-      category: 'pets'
-    }
   ];
 
   const filteredProducts = activeCategory === 'all' 
@@ -248,7 +145,7 @@ const FeaturedProducts = ({ id }: { id: string }) => {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-48 object-cover object-center"
+                  className="w-full h-60 object-cover object-center"
                 />
               </div>
               <div className="p-6">

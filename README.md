@@ -2,6 +2,6 @@
 
 ---
 
-Regreen is a beautifully designed, fictional landing page for a subscription-based service that delivers sustainable and eco-friendly home essentials. This project showcases a modern and responsive website built to inspire users to embrace sustainability.
+Regreen is a well designed, fictional landing page for a subscription-based service that delivers sustainable and eco-friendly home essentials. This project showcases a modern and responsive website built to inspire users to embrace sustainability.
 
 ---

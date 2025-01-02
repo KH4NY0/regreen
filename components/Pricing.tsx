@@ -19,7 +19,7 @@ const tiers: Tier[] = [
     priceMonthly: '$29.99',
     description: 'Perfect for individuals starting their sustainable journey.',
     features: [
-      '3-4 essential products monthly',
+      '2-4 essential products monthly',
       'Plastic-free packaging',
       'Carbon-neutral delivery',
       'Monthly impact report',
@@ -34,7 +34,7 @@ const tiers: Tier[] = [
     priceMonthly: '$79.99',
     description: 'Comprehensive eco-essentials for the whole household.',
     features: [
-      '10-12 premium products monthly',
+      '3-5 premium products monthly',
       'Customizable delivery schedule',
       'Priority carbon-neutral shipping',
       'Exclusive early access to new products',
