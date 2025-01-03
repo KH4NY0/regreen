@@ -12,17 +12,17 @@ import Footer from "@/components/Footer"
 
 const page = () => {
   return (
-    <div>
-      <Home />
+    <>
+      <Home /> 
       <HowItWorks  />
       <FeaturedProducts  />
       <ImpactMetrics />
       <Testimonials />
       <Pricing />
       <AboutUs />
-      <Footer />
-    </div>
+      <Footer /> 
+    </>
   )
-}
+} 
 
 export default page

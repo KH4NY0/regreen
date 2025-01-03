@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { NextSeo } from 'next-seo';
+import Head from 'next/head';
 
 interface Category {
   [key: string]: string;
@@ -147,23 +147,18 @@ const FeaturedProducts = () => {
 
   return (
     <>
-      <NextSeo
-        title={seoData.title}
-        description={seoData.description}
-        openGraph={{
-          title: seoData.title,
-          description: seoData.description,
-          type: 'website',
-          images: [
-            {
-              url: '/images/og-featured-products.jpg',
-              width: 1200,
-              height: 630,
-              alt: 'Eco-Friendly Lifestyle Products',
-            },
-          ],
-        }}
-      />
+      <Head>
+        <title>{seoData.title}</title>
+        <meta name="description" content={seoData.description} />
+        <meta name="keywords" content={seoData.keywords} />
+        <meta property="og:title" content={seoData.title} />
+        <meta property="og:description" content={seoData.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/images/og-featured-products.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Eco-Friendly Lifestyle Products" />
+      </Head>
 
       <section
         id="featured-products"
@@ -205,9 +200,9 @@ const FeaturedProducts = () => {
             role="list"
             aria-label="Product List"
           >
-            {filteredProducts.map((product) => (
+            {filteredProducts.map((product, index) => (
               <article
-                key={product.name || product.alt}
+                key={`${product.name}-${index}`}
                 className="group relative bg-white rounded-lg shadow-lg overflow-hidden"
                 itemScope
                 itemType="https://schema.org/Product"
