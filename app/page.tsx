@@ -14,12 +14,12 @@ const page = () => {
   return (
     <div>
       <Home />
-      <HowItWorks id="how-it-works" />
-      <FeaturedProducts id="featured-products" />
-      <ImpactMetrics id="impact-metrics" />
+      <HowItWorks  />
+      <FeaturedProducts  />
+      <ImpactMetrics />
       <Testimonials />
-      <Pricing id="pricing" />
-      <AboutUs id="about-us" />
+      <Pricing />
+      <AboutUs />
       <Footer />
     </div>
   )

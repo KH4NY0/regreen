@@ -6,7 +6,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import { WavyBackground } from './ui/wavy-background'
 import React from 'react'
-
+import Link from 'next/link'
 
 const navigation = [
   { name: 'Products', href: '#featured-products' },
@@ -24,7 +24,7 @@ const Home = () => {
       <header className="fixed inset-x-0 top-0 z-50 backdrop-blur-md supports-[backdrop-filter]:bg-white/60">
       <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 ">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Regreen</span>
               <Image
                 alt="regreen logo"
@@ -33,7 +33,7 @@ const Home = () => {
                 height={78}
                 className="h-8 w-auto"
               />
-            </a>
+            </Link>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -47,9 +47,9 @@ const Home = () => {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900 hover:text-green-800  ease-in-out duration-300">
+              <Link key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900 hover:text-green-800  ease-in-out duration-300">
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
           
@@ -61,7 +61,7 @@ const Home = () => {
             />
            <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="/" className="-m-1.5 p-1.5">
+              <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Regreen</span>
                 <Image
                   alt="regreen logo"
@@ -70,7 +70,7 @@ const Home = () => {
                   height={78}
                   className="h-8 w-auto"
                 />
-              </a>
+              </Link>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
@@ -84,22 +84,22 @@ const Home = () => {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
                 <div className="py-6">
-                  <a
+                  <Link
                     href="#"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     Log in
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -130,15 +130,15 @@ const Home = () => {
               Transform your home into an eco-haven with curated, earth-friendly essentials delivered monthly.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
-                <a
+                <Link
                   href="#"
                   className="hover-button"
                 >
                   Get Started
-                </a>
-                <a href="#how-it-works" className="text-sm/6 font-semibold text-gray-900 hover:text-green-800 ease-in-out duration-300">
+                </Link>
+                <Link href="#how-it-works" className="text-sm/6 font-semibold text-gray-900 hover:text-green-800 ease-in-out duration-300">
                   How It Works <span aria-hidden="true">→</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

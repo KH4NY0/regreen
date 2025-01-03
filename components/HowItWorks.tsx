@@ -1,44 +1,48 @@
-'use client'
+'use client';
 
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import { ClipboardIcon, LeafIcon, PackageIcon } from "lucide-react";
-import React from "react";
-import { useState } from "react";
-import { ReactNode } from "react";
+import React, { useState } from "react";
 
+// Define interfaces for type safety
+interface Step {
+  title: string;
+  description: string;
+  number: string;
+}
 
+interface CardProps {
+  className?: string;
+  children: React.ReactNode;
+}
 
-// Steps data structure remains the same for clarity and maintainability
-const steps = [
+interface CardTitleProps extends CardProps {}
+
+interface CardDescriptionProps extends CardProps {}
+
+// Steps data structure
+const steps: Step[] = [
   {
     title: "Take the Eco Quiz",
     description: "Tell us about your lifestyle and sustainability goals through our quick 2-minute quiz.",
-    link: "#",
-    icon: ClipboardIcon,
-    number: "01"
+    number: "01",
   },
   {
     title: "Get Your Personalized Box",
     description: "Receive a curated selection of eco-friendly products tailored to your preferences.",
-    link: "#",
-    icon: PackageIcon,
-    number: "02"
+    number: "02",
   },
   {
     title: "Make an Impact",
     description: "Track your environmental impact as you replace traditional products with sustainable alternatives.",
-    link: "#",
-    icon: LeafIcon,
-    number: "03"
-  }
+    number: "03",
+  },
 ];
 
-export const HowItWorks = ({ id }: { id: string }) => {
-  let [hoveredIndex, setHoveredIndex] = useState<null | number>(null);
+export const HowItWorks = () => {
+  const [hoveredIndex, setHoveredIndex] = useState<null | number>(null);
 
   return (
-    // Changed background to white and adjusted text colors for better contrast
     <section id="how-it-works" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -52,10 +56,10 @@ export const HowItWorks = ({ id }: { id: string }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {steps.map((step, idx) => {
-            const Icon = step.icon;
+            
             return (
               <div
-                key={step.number}
+                key={`${step.number}-${step.title}`} // Ensure unique key
                 className="relative group block p-2 h-full w-full"
                 onMouseEnter={() => setHoveredIndex(idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
@@ -68,18 +72,18 @@ export const HowItWorks = ({ id }: { id: string }) => {
                       initial={{ opacity: 0 }}
                       animate={{
                         opacity: 1,
-                        transition: { duration: 0.800 },
+                        transition: { duration: 0.8 },
                       }}
                       exit={{
                         opacity: 0,
-                        transition: { duration: 0.800, delay: 800 },
+                        transition: { duration: 0.8, delay: 0.8 },
                       }}
                     />
                   )}
                 </AnimatePresence>
                 <Card>
                   <div className="flex items-center justify-between">
-                    <Icon className="h-8 w-8 text-green-600" />
+                    
                     <span className="text-4xl font-bold text-green-100">
                       {step.number}
                     </span>
@@ -96,7 +100,7 @@ export const HowItWorks = ({ id }: { id: string }) => {
   );
 };
 
-const Card = ({ className, children }: { className?: string; children: ReactNode }) => {
+const Card: React.FC<CardProps> = ({ className, children }) => {
   return (
     <div
       className={cn(
@@ -111,7 +115,7 @@ const Card = ({ className, children }: { className?: string; children: ReactNode
   );
 };
 
-const CardTitle = ({ className, children }: { className?: string; children: ReactNode }) => {
+const CardTitle: React.FC<CardTitleProps> = ({ className, children }) => {
   return (
     <h4 className={cn("text-gray-900 font-bold tracking-wide mt-4", className)}>
       {children}
@@ -119,7 +123,7 @@ const CardTitle = ({ className, children }: { className?: string; children: Reac
   );
 };
 
-const CardDescription = ({ className, children }: { className?: string; children: ReactNode }) => {
+const CardDescription: React.FC<CardDescriptionProps> = ({ className, children }) => {
   return (
     <p
       className={cn(

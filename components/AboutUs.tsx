@@ -59,7 +59,7 @@ const timeline: TimelineEvent[] = [
   }
 ];
 
-const AboutUs = ({ id }: { id: string }) => {
+const AboutUs = () => {
   return (
     <>
       <Head>

@@ -2,8 +2,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Facebook, Instagram, Twitter, Github, Youtube } from 'lucide-react';
+import { Facebook, Instagram, Youtube } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
+
 
 const Footer: React.FC = () => {
   return (
@@ -39,27 +41,27 @@ const Footer: React.FC = () => {
           viewport={{ once: true }}
           className="flex justify-center space-x-6 mt-8"
         >
-          <a
+          <Link
             href="#"
             aria-label="Facebook"
             className="text-gray-900 hover:text-gray-700 transition duration-200"
           >
             <Facebook className="w-6 h-6" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
             aria-label="Instagram"
             className="text-gray-900 hover:text-gray-700 transition duration-200"
           >
             <Instagram className="w-6 h-6" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
             aria-label="Youtube"
             className="text-gray-900 hover:text-gray-700 transition duration-200"
           >
             <Youtube className="w-6 h-6" />
-          </a>
+          </Link>
           
         </motion.div>
       </div>

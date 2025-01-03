@@ -1,21 +1,31 @@
-'use client'
+'use client';
 
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  CartesianGrid,
+} from "recharts";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-
-const ImpactMetrics = ({ id }: { id: string }) => {
+const ImpactMetrics = () => {
+  // Animation controls for scroll-based animation
   const controls = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.2 });
 
+  // Trigger animation when the section comes into view
   useEffect(() => {
     if (inView) {
       controls.start("visible");
     }
   }, [controls, inView]);
 
+  // Data for the chart
   const data = [
     { month: "Jan", Plastic: 2000, Trees: 100, Carbon: 800 },
     { month: "Feb", Plastic: 3000, Trees: 300, Carbon: 900 },
@@ -27,19 +37,20 @@ const ImpactMetrics = ({ id }: { id: string }) => {
   ];
 
   return (
-    <section id="impact-metrics" className="py-24 bg-white text-gray-900 ">
+    <section id="impact-metrics" className="py-24 bg-white text-gray-900">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Header Section */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl font-semibold sm:text-4xl">
             Our Collective Impact
           </h2>
-          <p className="mt-6 text-lg text-gray-900 ">
-            Together with our community, we're making a measurable difference
+          <p className="mt-6 text-lg text-gray-900">
+            Together with our community, we&apos;re making a measurable difference
             for our planet.
           </p>
         </div>
 
-        {/* Line Graph with Scroll Animation */}
+        {/* Line Graph Section */}
         <motion.div
           ref={ref}
           className="flex justify-center items-center"
@@ -68,8 +79,11 @@ const ImpactMetrics = ({ id }: { id: string }) => {
                 axisLine={false}
               />
               <Tooltip
-                contentStyle={{ backgroundColor: "white", borderRadius: 8 }}
-                labelStyle={{ color: "black " }}
+                contentStyle={{
+                  backgroundColor: "white",
+                  borderRadius: 8,
+                }}
+                labelStyle={{ color: "black" }}
               />
               <Line
                 type="monotone"
